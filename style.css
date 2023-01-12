@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+:root{
+    --button-color:rgb(206, 206, 206);
+    --button-text-color:rgb(106, 105, 105);
+}
+body{
+    display: grid;
+    place-items: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Button */
+button{
+    border-radius: 5rem;
+    font-size: 1rem;
+    border: none;
+    color: var(--button-text-color);
+    cursor: pointer;
+    background-color: var(--button-color);
+    margin-top: 1rem;;
+    transition: all .1s ease-in-out;
+}
+#addInfo{
+    height: 3rem;
+    width: 8rem;
+}
+button:hover{
+    color:var(--button-color);
+    background-color: var(--button-text-color);
+}
+button:active{
+    scale: 1.2;
+}
+/* Popup window */
+.popupWindow{
+    width: 25rem;
+    height: auto;
+    border-radius: 1rem;
+    padding: 1rem;
+    border: var(--button-color) solid 1px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: -25vh;
+    transition: all ease-in-out .3s;
+}
+
+.popupWindow.active{
+    top: 40%;
+}
+label{
+    color: var(--button-text-color);
+    font-size: 1rem;
+}
+#submit{
+    margin-top: 1rem;
+    height: 2rem;
+    width: 4rem;
+}
