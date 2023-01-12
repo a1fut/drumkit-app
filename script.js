@@ -1,6 +1,7 @@
 const addBtn = document.getElementById('addInfo')
 const popupWidow = document.querySelector('.popupWindow')
 
+
 addBtn.addEventListener('click', function(){
     if(popupWidow.classList.length === 1){
         popupWidow.classList.add('active')
@@ -8,6 +9,10 @@ addBtn.addEventListener('click', function(){
          popupWidow.classList.remove('active')
     }   
 } )
+
+document.querySelector('.closeBtn').addEventListener('click', function(){
+    popupWidow.classList.remove('active')
+})
 
 let resultChart = document.getElementById('resultChart').getContext('2d')
 

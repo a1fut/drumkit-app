@@ -61,3 +61,16 @@ label{
     height: 2rem;
     width: 4rem;
 }
+.closeBtn{
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    color: var(--button-text-color);
+    cursor: pointer;
+}
+/* Wykres */
+#resultChart{
+    width: 50vw;
+    height: 20rem;
+
+}
