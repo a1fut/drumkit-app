@@ -4,9 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
     <title>Gym App</title>
 </head>
 <body>
-    <h1>Testing </h1>
+    <div class="chartContainer">
+        <canvas id = "resultChart"></canvas>
+    </div>
+     <button id = "addInfo">Dodaj wynik</button>
+     <div class="popupWindow">
+        <label for="name">Imię:</label>
+        <input type="text" name="name">
+        <label for="name">Ćwiczenie:</label>
+        <input type="text" name="cwiczenie">
+        <label for="name">Obciążenie (w kg):</label>
+        <input type="number" name="obciazenie">
+        <center>
+            <button id = "submit">Dodaj</button>
+        </center>
+    </div>  
 </body>
+<script src="script.js"></script>
 </html>
