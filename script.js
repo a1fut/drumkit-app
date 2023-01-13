@@ -1,6 +1,6 @@
 const addBtn = document.getElementById('addInfo')
 const popupWidow = document.querySelector('.popupWindow')
-
+const submitBtn = document.getElementById('submit')
 
 addBtn.addEventListener('click', function(){
     if(popupWidow.classList.length === 1){
@@ -14,17 +14,36 @@ document.querySelector('.closeBtn').addEventListener('click', function(){
     popupWidow.classList.remove('active')
 })
 
+// Chart
+
+submitBtn.addEventListener('click', function(){
+    myChart.data.datasets.forEach((datasets) => {
+        datasets.data.push(document.getElementById("weight").value)
+    });
+    // console.log(weight)
+    myChart.options.title.text = document.getElementById('name').value
+    myChart.data.labels.push(document.getElementById('exercise').value)
+    myChart.update()
+})
+
 let resultChart = document.getElementById('resultChart').getContext('2d')
+
+
 
 let myChart = new Chart(resultChart, {
     type: 'bar',
     data:{
-        labels:['Nazwa cwiczenia','Nazwa cwiczenia 2','Nazwa cwiczenia 4'],
+        labels:[],
         datasets:[{
             label:'Ciężar',
-            data:[123, 150, 200],
+            data: [],
             backgroundColor:'lightgreen'
         }]
     },
-    options:{},
+    options:{
+        title:{
+            display:true,
+            text: '',
+        }
+    },
 }) 
